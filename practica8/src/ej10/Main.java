@@ -23,7 +23,7 @@ public class Main {
  Elemento mínimo del array.
 
  Suma de los elementos del array.
-
+--------------------------------------------------------
  Métodos de búsqueda (lineal y dicotómica o binaria).
 
  Métodos varios de ordenación (búrbuja, selección, inserción y Shell).
@@ -49,5 +49,4 @@ librerías.
  * 
  */
 	}
-
 }
