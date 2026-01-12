@@ -1,12 +1,13 @@
 package matrices;
 
+import java.util.Arrays;
+
 public class Matrices2 {
 
 	public static void main(String[] args) {
 		//Definir una matriz de 6 filas y 8 columnas 
 		
-		int [][] matriz = new int [10][11], matriz2 = new int [6][6] matriz3 = new int{{0,30,2,0,0,0},
-																						{;
+		int [][] matriz = new int [10][11], matriz2 = new int [6][6], matriz3 = {{0,30,2,0,0,0},{0,30,2,0,0,0},{0,30,2,0,0,0}};
 	
 		
 		//rellenar la matriz con 1 en diaonal
@@ -15,7 +16,7 @@ public class Matrices2 {
 				if (col==i) matriz2[fil][col]=1;
 				System.out.print(matriz2[fil][col]+" ");
 			}//end for col
-			System.out.println();
+			System.out.println(Arrays.deepToString(matriz3));
 		}//end for fil
 	
 		System.out.println("\n--------------------\n");

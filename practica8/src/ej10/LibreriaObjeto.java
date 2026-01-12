@@ -66,7 +66,7 @@ public class LibreriaObjeto {
 	public int sumaElementos() {
 		int suma = 0;
 		
-		for (int i : array) {
+		for (int i : this.array) {
 			suma+=i;
 		}
 		
@@ -75,7 +75,15 @@ public class LibreriaObjeto {
 	}
 	
 	
-	
+	public int busquedaLineal(int numero){
+		int cont=-1;
+		do {
+		cont++;
+		}
+		while ((this.array[cont]!=numero) && (cont < (this.array.length-1)));
+		if(this.array[cont]==numero) return cont;
+		return -1;
+		}
 	
 	
 	
