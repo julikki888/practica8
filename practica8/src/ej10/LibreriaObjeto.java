@@ -87,7 +87,24 @@ public class LibreriaObjeto {
 	
 	
 	
-	
+	public  int busquedaBinaria(int numero){
+		boolean sw = false;
+		int mitad, primero = 0, ultimo = this.array.length-1;
+		do{
+		mitad = (primero + ultimo)/2;
+		if(this.array[mitad]==numero)
+		sw = true;
+		else if(this.array[mitad]<numero)
+		primero = mitad+1;
+		else
+		ultimo = mitad-1;
+		}
+		while ((sw == false) && (primero <= ultimo));
+		if(sw == false)
+		return -1;
+		return mitad;
+		}
+
 	
 	
 	
