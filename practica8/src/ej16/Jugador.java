@@ -54,12 +54,11 @@ public class Jugador {
 	 */
 	public String jugar(Juego7Media obJuego) {
 
-		if (!continua) return "El usuario ya se ha pasado, no continua jugando";
-		
-		int [] cartaSacada;
+		if (!continua) 
+			return "El usuario ya se ha pasado, no continua jugando";
 		
 		// Sacar la carta y guardar su String en cad
-		cartaSacada = obJuego.sacaCarta();
+		int [] cartaSacada = obJuego.sacaCarta();
 		
 		// Acumular los puntos de la carta sacada
 		this.puntos = this.puntos + obJuego.getPuntuacionCarta(cartaSacada[1]);
@@ -69,7 +68,7 @@ public class Jugador {
 			this.continua = false;
 		}
 		
-		return obJuego.toStringCarta(cartaSacada[0], cartaSacada[1]);
+		return obJuego.toStrigCarta1(cartaSacada[0], cartaSacada[1]);
 		
 	}
 	

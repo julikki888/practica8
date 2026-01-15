@@ -45,6 +45,7 @@ public class Juego7Media {
 	 * Constructor
 	 */
 	public Juego7Media() {
+		this.cartasRestantes=40;
 		this.baraja = new boolean[4][10];
 		for(int i=0;i<baraja.length;i++) {
 			Arrays.fill(this.baraja[i], true);
@@ -120,7 +121,10 @@ public class Juego7Media {
 		
 		return
 				switch (valor) {
-					case 0,1,2,3,4,5,6 ->{yield (valor+1)+" de ";}		
+					case 0,1,2,3,4,5,6 ->{yield (valor+1)+" de ";}
+					case 7-> {yield "sota de ";}
+					case 8-> {yield "caballo de ";}
+					case 9-> {yield "rey de ";}
 					default ->{yield "";}}
 			+
 				switch (palo) {
@@ -132,11 +136,6 @@ public class Juego7Media {
 			};
 
 	}
-	
-	public String toStringCarta(int palo, int valor) {
-		return null;
-	}
-	
 	
 	/**
 	 * Redefinición de toString, muestra las cartas restantes
@@ -154,7 +153,7 @@ public class Juego7Media {
 			
 		}
 		
-		return null;
+		return cad;
 	}
 	
 }

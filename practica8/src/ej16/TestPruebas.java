@@ -25,10 +25,10 @@ public class TestPruebas {
 		
 		// Mostrar las cartas anteriores en pantalla
 		System.out.println("\n\nCARTAS SACADAS");
-		System.out.println(miJuego.toStringCarta(carta1[0],carta1[1]));
-		System.out.println(miJuego.toStringCarta(carta2[0],carta2[1]));
-		System.out.println(miJuego.toStringCarta(carta3[0],carta3[1]));
-		System.out.println(miJuego.toStringCarta(carta4[0],carta4[1]));
+		System.out.println(miJuego.toStrigCarta1(carta1[0],carta1[1]));
+		System.out.println(miJuego.toStrigCarta1(carta2[0],carta2[1]));
+		System.out.println(miJuego.toStrigCarta1(carta3[0],carta3[1]));
+		System.out.println(miJuego.toStrigCarta1(carta4[0],carta4[1]));
 		
 		// Mostrar la puntuaci�n de la segunda carta
 		System.out.println("Puntos de la segunda carta sacada: "+miJuego.getPuntuacionCarta(carta2[1]));
