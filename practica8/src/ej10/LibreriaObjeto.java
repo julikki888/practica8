@@ -9,7 +9,7 @@ public class LibreriaObjeto {
 	 * Variables de instancia
 	 */
 	
-	private int[] array = new int [100];
+	private int[] array = new int [10];
 
 	
 	
@@ -226,7 +226,15 @@ elementos a la derecha y perdiendo el último elemento que haya en el arr*/
 			aux2=this.array[i+1];
 			
 		}
-		
+		this.array[this.array.length-1]=aux;
+	}
+	
+	
+	public void borrarPorPosicion(int posicion) {				
+		for(int i=posicion;i<this.array.length-1;i++) {			
+			this.array[i]=this.array[i+1];			
+		}
+		this.array[this.array.length-1]=0;
 	}
 	
 	

@@ -14,6 +14,19 @@ public class Main {
 		
 		lo.ordenacionBurbuja();
 		lo.toStringArray();
+		System.out.println("\n---porposicion");
+		
+		lo.borrarPorPosicion(1);
+		lo.toStringArray();
+		System.out.println();
+		
+		lo.insertarNumero(67, 4);
+		lo.toStringArray();
+		
+		
+		System.out.println();
+		lo.desordenarArray();
+		lo.toStringArray();
 		
 		
 		
