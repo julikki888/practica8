@@ -3,6 +3,20 @@ package ej10;
 public class Main {
 
 	public static void main(String[] args) {
+
+		
+		LibreriaObjeto lo = new LibreriaObjeto();
+		
+		lo.cargaDatosAleatoria();
+		lo.toStringArray();
+		
+		System.out.println("\n"+lo.busquedaBinaria(30));
+		
+		lo.ordenacionBurbuja();
+		lo.toStringArray();
+		
+		
+		
 /*
  * 10.- Desarrolla dos librerías con métodos para manejar arrays:
  * 
