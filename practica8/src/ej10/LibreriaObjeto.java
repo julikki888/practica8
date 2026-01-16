@@ -229,4 +229,7 @@ elementos a la derecha y perdiendo el último elemento que haya en el arr*/
 		
 	}
 	
+	
+	
+	
 }
