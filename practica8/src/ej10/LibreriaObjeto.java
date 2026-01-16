@@ -141,6 +141,92 @@ public class LibreriaObjeto {
 	}
 	
 	
+	public void ordenacionSeleccion(){
+		int pos_menor, menor;
+		
+		for(int i=0; i<=this.array.length-2; i++){
+			pos_menor=i;
+			menor = this.array[i];
+			
+			for(int j= i+1; j<=this.array.length-1; j++){
+				if(this.array[j]<menor){
+					pos_menor = j;
+					menor = this.array[j];
+				}
+			}//fin for interios
+			
+			this.array[pos_menor]=this.array[i];
+			this.array[i]=menor;
+		}//fin for
+	}
 	
+	public void ordenarInsercion() {
+		int j, aux;
+		
+		for (int i = 1; i<(this.array.length); i++) {
+			aux = this.array[i];
+			j = i-1;
+		
+			while ((j >= 0) && (this.array[j] > aux)) {
+				this.array[j+1] = this.array[j];
+				j--;
+			}//fin while
+			this.array[j+1] = aux;
+		}//fin for
+	}
+	
+	
+	public void ordenarShell() {
+		int sw, i, salto, aux, n;
+		n = this.array.length-1;
+		salto = n;
+		while (salto != 1) {
+			sw = 1;
+			salto = salto/2;
+			while (sw!=0) {
+				i = 0;
+				sw = 0;
+				while (i <= (n-salto)) {
+					if (this.array[i] > this.array[i+salto]) {
+						aux = this.array[i+salto];
+						this.array[i+salto] = this.array[i];
+						this.array[i]= aux;
+						sw = 1;
+					}
+					i++;
+				}
+			}
+		}
+	}
+	
+	public void desordenarArray() {
+		int aux, random;
+		
+		for (int i=0;i<(this.array.length);i++) {
+			random=(int)(Math.random()*this.array.length);
+			aux = this.array[i];
+			this.array[i]=this.array[random];
+			this.array[random]=aux;
+		}
+	}
+	
+	/** Método de insertar por posición, es decir, colocando el nuevo número en la posición indicada,
+siempre y cuando sea válida, es decir, le abriremos un hueco en el array desplazando todos los
+elementos a la derecha y perdiendo el último elemento que haya en el arr*/
+	
+	public void insertarNumero(int num, int posicion) {
+		
+		int aux=this.array[posicion], aux2=this.array[posicion+1];
+		this.array[posicion]=num;
+		
+		for(int i=posicion+1;i<this.array.length-1;i++) {
+			
+			this.array[i]=aux;
+			aux=aux2;
+			aux2=this.array[i+1];
+			
+		}
+		
+	}
 	
 }
