@@ -21,6 +21,8 @@ public class Main {
 		System.out.println();
 		
 		lo.insertarNumero(67, 4);
+		lo.insertarNumero(67, 2);
+		lo.insertarNumero(67, 3);
 		lo.toStringArray();
 		
 		
@@ -65,7 +67,16 @@ elementos a la derecha y perdiendo el último elemento que haya en el array.
 	elementos a la izquierda, y colocaremos un 0 en la última posición del array.
 	
  Método de borrar un determinado elemento (la primera ocurrencia que encontremos).
-
+*/
+		
+		System.out.println("\n------------borrar elemneto0s");
+		lo.borrarDeterminado(67);
+		lo.toStringArray();
+		System.out.println("\n");
+		lo.borrarTodosDeterminados(67);
+		lo.toStringArray();
+		
+/*
  Método para borrar todas las apariciones de un elemento.
 
 

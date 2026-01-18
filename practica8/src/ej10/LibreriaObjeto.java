@@ -237,6 +237,25 @@ elementos a la derecha y perdiendo el último elemento que haya en el arr*/
 		this.array[this.array.length-1]=0;
 	}
 	
+///	 Método de borrar un determinado elemento (la primera ocurrencia que encontremos).
+
+	public void borrarDeterminado(int num) {
+		int busqueda=this.busquedaLineal(num);
+		if(busqueda >=0) {
+			this.array[busqueda]=0;
+		}
+		
+	}
+	
+///  Método para borrar todas las apariciones de un elemento.
+
+	
+	public void borrarTodosDeterminados(int num) {
+		while (this.busquedaLineal(num)>=0) {
+			this.array[this.busquedaLineal(num)]=0;
+		}
+	}
+	
 	
 	
 	
