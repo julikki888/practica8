@@ -210,7 +210,7 @@ public class LibreriaClase {
 		
 	}
 	
-	public void borrarTodosDeterminados(int num,int array[]) {
+	public static void borrarTodosDeterminados(int num,int array[]) {
 		while (busquedaLineal(array,num)>=0) {
 			array[busquedaLineal(array,num)]=0;
 		}
